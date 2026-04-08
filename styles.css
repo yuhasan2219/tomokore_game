@@ -1,0 +1,139 @@
+:root {
+  --bg: #f7f6ef;
+  --panel: #ffffff;
+  --text: #1f2937;
+  --accent: #2563eb;
+  --good: #0f766e;
+  --meh: #92400e;
+  --bad: #991b1b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+#app {
+  max-width: 1080px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.app-header {
+  background: #dbeafe;
+  border: 2px solid #93c5fd;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.screen {
+  display: none;
+  background: var(--panel);
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.screen.active {
+  display: block;
+}
+
+.stack,
+.footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+button {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.ghost {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+button.danger {
+  background: #dc2626;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 8px 0;
+  font: inherit;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+.students-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 8px;
+  max-height: 50vh;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.student-card {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.student-card.main {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.student-card button {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.hud {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
+  background: #eff6ff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.hint {
+  color: #4b5563;
+}
+
+.mood.good {
+  color: var(--good);
+}
+
+.mood.meh {
+  color: var(--meh);
+}
+
+.mood.bad {
+  color: var(--bad);
+  font-weight: 700;
+}
